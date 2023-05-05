@@ -23,6 +23,6 @@
 Your name: ${nameAttribute}
 <br>
 <br>
-<a href="<%=request.getContextPath()%>/first-view.jsp">Return to first page..</a>
+<button onclick="history.back()">Назад</button>
 </body>
 </html>

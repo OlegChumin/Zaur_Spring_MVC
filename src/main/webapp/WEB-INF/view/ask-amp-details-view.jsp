@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -12,7 +13,9 @@
     <input type="text" name="employeeName" placeholder="Write your name.."/>
     <input type="submit"/>
 </form>
-
+<br>
+<br>
+<button onclick="history.back()">Назад</button>
 </body>
 
 </html>
