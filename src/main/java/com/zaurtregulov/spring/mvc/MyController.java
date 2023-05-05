@@ -28,7 +28,7 @@ public class MyController {
     public String showEmpDetails(HttpServletRequest request, Model model) {
         String empName = request.getParameter("employeeName");
         empName = "Mr. " + empName;
-        model.addAttribute("nameAttribute", empName);
+        model.addAttribute("nameAttribute", empName); // добавляем атрибут в модель, модель - просто контейнер для данных
         return "show-emp-details-view";
     }
 }
