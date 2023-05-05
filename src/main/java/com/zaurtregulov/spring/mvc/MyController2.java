@@ -6,6 +6,15 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+/**
+ *
+ Если вы добавите аннотацию @RequestMapping("/employee") к классу MyController2, то все URL-адреса в этом контроллере
+ будут начинаться с "/employee". Например, URL-адрес, указанный в аннотации @RequestMapping("/askDetails"), будет теперь
+ "/employee/askDetails". Если в вашем приложении используется только один контроллер, то добавление аннотации
+ @RequestMapping к классу не имеет большого смысла, но если вы имеете несколько контроллеров, то это может помочь
+ организовать их логически.
+ *
+ * */
 @Controller
 //@RequestMapping("/employee")
 public class MyController2 {
@@ -14,7 +23,12 @@ public class MyController2 {
     public String showFirstView() {
         return "first-view";
     }
-
+//Таким образом, при обращении к / будет сначала выполнен метод showFirstView(),
+// который перенаправит запрос на /employee/first-view, где уже будет возвращаться нужное представление.
+    @RequestMapping("/employee/first-view")
+    public String showFirstView2() {
+        return "first-view";
+    }
     @RequestMapping("/askDetails") //URL
     public String askEmplyeeDetails(Model model) {
 
