@@ -6,7 +6,7 @@
 <h2> This is the first Spring application !!!</h2>
 <br>
 <br>
-< a h
+<a href="askDetails">Please write your details..</a>
 
 </body>
 
