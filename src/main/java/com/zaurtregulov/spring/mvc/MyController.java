@@ -36,7 +36,7 @@ public class MyController {
 
     @RequestMapping("/showDetails")
     public String showEmpDetails(@RequestParam("employeeName") String empName, Model model) {
-        empName = "Mr. " + empName;
+        empName = "Mr./Mrs. " + empName + "!";
         model.addAttribute("nameAttribute", empName); // добавляем атрибут в модель, модель - просто контейнер для данных
         model.addAttribute("description", " - Java software developer");
         return "show-emp-details-view";
