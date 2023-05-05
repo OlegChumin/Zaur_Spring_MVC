@@ -19,8 +19,11 @@
 <h2>Dear Employee, your are WELCOME!!!</h2>
 <br>
 <br>
-<%--Your name: ${param.employeeName}--%>
-Your name: ${nameAttribute} ${description}
+Your name: ${employee.name}
+<br>
+Your surname: ${employee.surname}
+<br>
+Your salary: ${employee.salary}
 <br>
 <br>
 <button onclick="history.back()">Back</button>

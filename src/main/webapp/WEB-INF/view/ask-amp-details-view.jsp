@@ -25,7 +25,7 @@
     Salary <form:input path="salary"/> <!--GET salary-->
     <br>
     <br>
-    <input type="submit" value="OK"/>
+    <input type="submit" value="OK"/> <!--тут срабатывают сеттеры-->
 </form:form>
 <br>
 <br>
