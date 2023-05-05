@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Employee</title>
+    <title>Employee details request..</title>
 </head>
 <body>
 <h2>Dear Employee, Pls. enter your details</h2>

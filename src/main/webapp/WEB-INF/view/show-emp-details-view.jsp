@@ -13,14 +13,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Show Employee details</title>
 </head>
 <body>
 <h2>Dear Employee, your are WELCOME!!!</h2>
 <br>
 <br>
 <%--Your name: ${param.employeeName}--%>
-Your name: ${nameAttribute}
+Your name: ${nameAttribute} ${description}
 <br>
 <br>
 <button onclick="history.back()">Назад</button>

@@ -29,6 +29,7 @@ public class MyController {
         String empName = request.getParameter("employeeName");
         empName = "Mr. " + empName;
         model.addAttribute("nameAttribute", empName); // добавляем атрибут в модель, модель - просто контейнер для данных
+        model.addAttribute("description", " - Java software developer");
         return "show-emp-details-view";
     }
 }
