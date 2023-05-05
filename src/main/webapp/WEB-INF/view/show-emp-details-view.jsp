@@ -23,6 +23,6 @@
 Your name: ${nameAttribute} ${description}
 <br>
 <br>
-<button onclick="history.back()">Назад</button>
+<button onclick="history.back()">Back</button>
 </body>
 </html>
