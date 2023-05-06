@@ -21,6 +21,7 @@
     <br>
     <br>
     Surname <form:input path="surname"/> <!--GET surname-->
+    <form:errors path="surname"/> <!--валидация на mandatory field-->
     <br>
     <br>
     Salary <form:input path="salary"/> <!--GET salary-->

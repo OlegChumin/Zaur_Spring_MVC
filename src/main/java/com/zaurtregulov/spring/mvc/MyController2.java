@@ -56,6 +56,8 @@ public class MyController2 {
     @RequestMapping("/showDetails")
     public String showEmpDetails(@Valid @ModelAttribute("employee") Employee emp, //@Valid проверка атрибута employee
                                  BindingResult bindingResult) { //результат проверки employee
+//        System.out.println("surname length = " + emp.getSurname().length());
+
         if (bindingResult.hasErrors()) {
             return "ask-emp-details-view"; // если валидация с ошибкой возвращаем ту же страницу и она отображает
             // message = "name must be 2..256 symbols!"
