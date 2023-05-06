@@ -1,6 +1,7 @@
 package com.zaurtregulov.spring.mvc;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Employee {
@@ -12,7 +13,7 @@ public class Employee {
     private Map<String, String> departmentsList;
 
     public Employee() {
-        departmentsList = new HashMap<>();
+        departmentsList = new LinkedHashMap<>();
         departmentsList.put("IT", "Information Technology");
         departmentsList.put("HR", "Human resources");
         departmentsList.put("SALES", "Sales department");
