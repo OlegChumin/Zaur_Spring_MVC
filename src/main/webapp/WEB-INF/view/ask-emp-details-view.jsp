@@ -17,7 +17,7 @@
 <%--@elvariable id="employee" type=""--%>
 <form:form action="showDetails" modelAttribute="employee">
     Name <form:input path="name"/> <!--GET name-->
-    <form:errors path="name"/> <!--выдает message ошибки если поле менее 2 или более 256 символов-->
+    <form:errors path="name"/> <!--выдает message ошибки если поле менее 2..256 символов-->
     <br>
     <br>
     Surname <form:input path="surname"/> <!--GET surname-->
@@ -34,19 +34,19 @@
 </form:select>
     <br>
     Which car do you want?
-<%--    Tesla <form:radiobutton path="carBrand" value="Tesla"/>--%>
-<%--    BMW <form:radiobutton path="carBrand" value="BMW"/>--%>
-<%--    Audi <form:radiobutton path="carBrand" value="Audi"/>--%>
-<%--    Mercedes <form:radiobutton path="carBrand" value="Mercedes-Benz"/>--%>
-<%--    Toyota <form:radiobutton path="carBrand" value="Toyota"/>--%>
+    <%--    Tesla <form:radiobutton path="carBrand" value="Tesla"/>--%>
+    <%--    BMW <form:radiobutton path="carBrand" value="BMW"/>--%>
+    <%--    Audi <form:radiobutton path="carBrand" value="Audi"/>--%>
+    <%--    Mercedes <form:radiobutton path="carBrand" value="Mercedes-Benz"/>--%>
+    <%--    Toyota <form:radiobutton path="carBrand" value="Toyota"/>--%>
     <form:radiobuttons path="carBrand" items="${employee.carBrandsList}"/>
     <br>
     Foreign language(s)
-<%--    EN <form:checkbox path="languages" value="English"/>--%>
-<%--    RU <form:checkbox path="languages" value="Russian"/>--%>
-<%--    DE <form:checkbox path="languages" value="Deutsch"/>--%>
-<%--    FR <form:checkbox path="languages" value="French"/>--%>
-<%--    ES <form:checkbox path="languages" value="Spanish"/>--%>
+    <%--    EN <form:checkbox path="languages" value="English"/>--%>
+    <%--    RU <form:checkbox path="languages" value="Russian"/>--%>
+    <%--    DE <form:checkbox path="languages" value="Deutsch"/>--%>
+    <%--    FR <form:checkbox path="languages" value="French"/>--%>
+    <%--    ES <form:checkbox path="languages" value="Spanish"/>--%>
     <form:checkboxes path="languages" items="${employee.languagesList}"/>
     <input type="submit" value="OK"/> <!--тут срабатывают сеттеры-->
     <br>

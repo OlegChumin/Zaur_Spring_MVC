@@ -42,7 +42,7 @@ public class MyController2 {
 //        employee.setSalary(3500);
 
         model.addAttribute("employee", new Employee()); // смотри ниже комментарий
-        return "ask-amp-details-view";
+        return "ask-emp-details-view";
     }
 //    Эта строка кода добавляет объект Employee в модель Model, который будет доступен в представлении JSP.
 //
