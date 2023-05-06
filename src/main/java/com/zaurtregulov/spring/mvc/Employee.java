@@ -30,7 +30,7 @@ public class Employee {
 
     private Map<String, String> languagesList;
 
-    @Pattern(regexp = "\\+\\d{2}-\\d{3}=\\d{3}-\\d{2}-\\d{2}", message = "please use pattern +XX-XXX-XXX-XX-XX")
+    @Pattern(regexp = "\\+?\\d{2}-?\\d{3}-?\\d{3}-?\\d{2}-?\\d{2}", message = "please use pattern +XX XXX XXX XX XX")
     private String phoneNumber;
 
     public Employee() {

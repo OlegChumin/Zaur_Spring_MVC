@@ -35,6 +35,7 @@
     <form:options items="${employee.departmentsList}"/>
 </form:select>
     <br>
+    <br>
     Which car do you want?
     <%--    Tesla <form:radiobutton path="carBrand" value="Tesla"/>--%>
     <%--    BMW <form:radiobutton path="carBrand" value="BMW"/>--%>
@@ -42,6 +43,7 @@
     <%--    Mercedes <form:radiobutton path="carBrand" value="Mercedes-Benz"/>--%>
     <%--    Toyota <form:radiobutton path="carBrand" value="Toyota"/>--%>
     <form:radiobuttons path="carBrand" items="${employee.carBrandsList}"/>
+    <br>
     <br>
     Foreign language(s)
     <%--    EN <form:checkbox path="languages" value="English"/>--%>
@@ -52,6 +54,7 @@
     <form:checkboxes path="languages" items="${employee.languagesList}"/>
     <br>
     <br>
+    Phone number:
     <form:input path="phoneNumber"/>
     <form:errors path="phoneNumber"/>
     <input type="submit" value="OK"/> <!--тут срабатывают сеттеры-->
