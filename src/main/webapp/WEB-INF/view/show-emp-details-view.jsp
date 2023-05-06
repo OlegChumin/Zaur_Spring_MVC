@@ -43,6 +43,8 @@ Language(s):
 
 Phone number: ${employee.phoneNumber}
 <br>
+Email: ${employee.email}
+<br>
 <button onclick="history.back()">Back</button>
 </body>
 </html>
