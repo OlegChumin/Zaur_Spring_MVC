@@ -46,7 +46,7 @@
 <%--    DE <form:checkbox path="languages" value="Deutsch"/>--%>
 <%--    FR <form:checkbox path="languages" value="French"/>--%>
 <%--    ES <form:checkbox path="languages" value="Spanish"/>--%>
-    <form:checkboxes path="language" items="${employee.languagesList}"/>
+    <form:checkboxes path="languages" items="${employee.languagesList}"/>
     <input type="submit" value="OK"/> <!--тут срабатывают сеттеры-->
     <br>
 </form:form>
