@@ -1,9 +1,6 @@
 package com.zaurtregulov.spring.mvc;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -16,6 +13,10 @@ public class Employee {
 //    @NotEmpty(message = "surname is mandatory field and cannot be null")
     @NotBlank(message = "surname is mandatory field and cannot be null")
     private String surname;
+
+    @NotBlank(message = "salary cannot be empty or null")
+    @Min(value = 2800, message = "must be > 2799 USD")
+    @Max(value = 16_000, message = "must be less 15_999 USD")
     private int salary;
     private String department;
 

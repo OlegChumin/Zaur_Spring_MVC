@@ -25,6 +25,7 @@
     <br>
     <br>
     Salary <form:input path="salary"/> <!--GET salary-->
+    <form:errors path="salary"/> <!--валидация на mandatory field и min и max значения-->
     <br>
     <br>
     Department <form:select path="department">
