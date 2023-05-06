@@ -50,6 +50,10 @@
     <%--    FR <form:checkbox path="languages" value="French"/>--%>
     <%--    ES <form:checkbox path="languages" value="Spanish"/>--%>
     <form:checkboxes path="languages" items="${employee.languagesList}"/>
+    <br>
+    <br>
+    <form:input path="phoneNumber"/>
+    <form:errors path="phoneNumber"/>
     <input type="submit" value="OK"/> <!--тут срабатывают сеттеры-->
     <br>
 </form:form>

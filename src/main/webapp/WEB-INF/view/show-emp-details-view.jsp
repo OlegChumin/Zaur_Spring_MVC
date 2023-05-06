@@ -40,6 +40,9 @@ Language(s):
         <li>${lang}</li>
     </c:forEach>
 </ul>
+
+Phone number: ${employee.phoneNumber}
+<br>
 <button onclick="history.back()">Back</button>
 </body>
 </html>
