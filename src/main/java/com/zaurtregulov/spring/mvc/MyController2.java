@@ -37,9 +37,17 @@ public class MyController2 {
 //        employee.setSurname("Chumin");
 //        employee.setSalary(3500);
 
-        model.addAttribute("employee", new Employee());
+        model.addAttribute("employee", new Employee()); // смотри ниже комментарий
         return "ask-amp-details-view";
     }
+//    Эта строка кода добавляет объект Employee в модель Model, который будет доступен в представлении JSP.
+//
+//    Метод addAttribute() принимает два параметра: имя атрибута и значение атрибута. В данном случае, имя атрибута
+//    задано как "employee", а значение - как новый объект Employee.
+//
+//    Теперь, когда этот атрибут был добавлен в модель, он будет доступен в JSP-странице через выражение JSP ${employee}.
+//    Например, в коде JSP можно получить доступ к полям объекта Employee, используя такие выражения,
+//    как ${employee.name}, ${employee.surname}, ${employee.salary} и т.д.
 
     @RequestMapping("/showDetails")
     public String showEmpDetails(@ModelAttribute("employee") Employee emp) {

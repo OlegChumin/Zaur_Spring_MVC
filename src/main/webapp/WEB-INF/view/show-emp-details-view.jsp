@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Oleg
@@ -31,6 +32,14 @@ Your department: ${employee.department}
 <br>
 Your car: ${employee.carBrand}
 <br>
+Language(s):
+<%--<ul> в HTML-коде является тегом для создания неупорядоченного списка. Тег <ul> обычно используется вместе с тегом
+<li>, который обозначает отдельный элемент списка List item.--%>
+<ul>
+    <c:forEach var="lang" items="${employee.languages}">
+        <li>${lang}</li>
+    </c:forEach>
+</ul>
 <button onclick="history.back()">Back</button>
 </body>
 </html>
