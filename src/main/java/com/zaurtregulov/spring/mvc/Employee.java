@@ -33,6 +33,8 @@ public class Employee {
     @Pattern(regexp = "\\+?\\d{2}-?\\d{3}-?\\d{3}-?\\d{2}-?\\d{2}", message = "please use pattern +XX XXX XXX XX XX")
     private String phoneNumber;
 
+    private String email;
+
     public Employee() {
         departmentsList = new LinkedHashMap<>();
         departmentsList.put("IT", "Information Technology");
@@ -132,6 +134,14 @@ public class Employee {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
