@@ -17,6 +17,7 @@
 <%--@elvariable id="employee" type=""--%>
 <form:form action="showDetails" modelAttribute="employee">
     Name <form:input path="name"/> <!--GET name-->
+    <form:errors path="name"/> <!--выдает message ошибки если поле менее 2 или более 256 символов-->
     <br>
     <br>
     Surname <form:input path="surname"/> <!--GET surname-->

@@ -1,10 +1,12 @@
 package com.zaurtregulov.spring.mvc;
 
+import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Employee {
+    @Size(min = 2, max = 256, message = "name must be 2..256 symbols!") // минимальная и максимальная длина имени в символах
     private String name;
     private String surname;
     private int salary;
