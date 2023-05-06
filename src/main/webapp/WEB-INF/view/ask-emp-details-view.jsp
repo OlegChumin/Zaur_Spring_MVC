@@ -18,24 +18,20 @@
 <form:form action="showDetails" modelAttribute="employee">
     Name <form:input path="name"/> <!--GET name-->
     <form:errors path="name"/> <!--выдает message ошибки если поле менее 2..256 символов-->
-    <br>
-    <br>
+    <br><br>
     Surname <form:input path="surname"/> <!--GET surname-->
     <form:errors path="surname"/> <!--валидация на mandatory field-->
-    <br>
-    <br>
+    <br><br>
     Salary <form:input path="salary"/> <!--GET salary-->
     <form:errors path="salary"/> <!--валидация на mandatory field и min и max значения-->
-    <br>
-    <br>
+    <br><br>
     Department <form:select path="department">
     <%--    <form:option value="Information Technology" label="IT"/>--%>
     <%--    <form:option value="Humar Resources" label="HR"/>--%>
     <%--    <form:option value="Sales department" label="SALES"/>--%>
     <form:options items="${employee.departmentsList}"/>
 </form:select>
-    <br>
-    <br>
+    <br><br>
     Which car do you want?
     <%--    Tesla <form:radiobutton path="carBrand" value="Tesla"/>--%>
     <%--    BMW <form:radiobutton path="carBrand" value="BMW"/>--%>
@@ -43,8 +39,7 @@
     <%--    Mercedes <form:radiobutton path="carBrand" value="Mercedes-Benz"/>--%>
     <%--    Toyota <form:radiobutton path="carBrand" value="Toyota"/>--%>
     <form:radiobuttons path="carBrand" items="${employee.carBrandsList}"/>
-    <br>
-    <br>
+    <br><br>
     Foreign language(s)
     <%--    EN <form:checkbox path="languages" value="English"/>--%>
     <%--    RU <form:checkbox path="languages" value="Russian"/>--%>
@@ -52,11 +47,14 @@
     <%--    FR <form:checkbox path="languages" value="French"/>--%>
     <%--    ES <form:checkbox path="languages" value="Spanish"/>--%>
     <form:checkboxes path="languages" items="${employee.languagesList}"/>
-    <br>
-    <br>
+    <br><br>
     Phone number:
     <form:input path="phoneNumber"/>
     <form:errors path="phoneNumber"/>
+    <br><br>
+    Email:
+    <form:input path="email"/>
+    <form:errors path="email"/>
     <input type="submit" value="OK"/> <!--тут срабатывают сеттеры-->
     <br>
 </form:form>
