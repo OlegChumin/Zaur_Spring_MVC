@@ -26,14 +26,24 @@
     <br>
     <br>
     Department <form:select path="department">
-<%--    <form:option value="Information Technology" label="IT"/>--%>
-<%--    <form:option value="Humar Resources" label="HR"/>--%>
-<%--    <form:option value="Sales department" label="SALES"/>--%>
+    <%--    <form:option value="Information Technology" label="IT"/>--%>
+    <%--    <form:option value="Humar Resources" label="HR"/>--%>
+    <%--    <form:option value="Sales department" label="SALES"/>--%>
     <form:options items="${employee.departmentsList}"/>
 </form:select>
+    <br>
+    Which car do you want?
+<%--    Tesla <form:radiobutton path="carBrand" value="Tesla"/>--%>
+<%--    BMW <form:radiobutton path="carBrand" value="BMW"/>--%>
+<%--    Audi <form:radiobutton path="carBrand" value="Audi"/>--%>
+<%--    Mercedes <form:radiobutton path="carBrand" value="Mercedes-Benz"/>--%>
+<%--    Toyota <form:radiobutton path="carBrand" value="Toyota"/>--%>
+    <form:radiobuttons path="carBrand" items="${employee.carBrandsList}"/>
     <input type="submit" value="OK"/> <!--тут срабатывают сеттеры-->
+    <br>
 </form:form>
 <button onclick="history.back()">Back</button>
+
 </body>
 
 </html>

@@ -12,11 +12,22 @@ public class Employee {
 
     private Map<String, String> departmentsList;
 
+    private String carBrand;
+
+    private Map<String, String> carBrandsList;
+
     public Employee() {
         departmentsList = new LinkedHashMap<>();
         departmentsList.put("IT", "Information Technology");
         departmentsList.put("HR", "Human resources");
         departmentsList.put("SALES", "Sales department");
+
+        carBrandsList = new LinkedHashMap<>();
+        carBrandsList.put("Tesla","Tesla>");
+        carBrandsList.put("BMW","BMW>");
+        carBrandsList.put("Audi","Audi>");
+        carBrandsList.put("Mercedes-Benz","Mercedes>");
+        carBrandsList.put("Toyota","Toyota>");
     }
 
     public String getName() {
@@ -57,6 +68,22 @@ public class Employee {
 
     public void setDepartmentsList(Map<String, String> departmentsList) {
         this.departmentsList = departmentsList;
+    }
+
+    public String getCarBrand() {
+        return carBrand;
+    }
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
+    }
+
+    public Map<String, String> getCarBrandsList() {
+        return carBrandsList;
+    }
+
+    public void setCarBrandsList(Map<String, String> carBrandsList) {
+        this.carBrandsList = carBrandsList;
     }
 
     @Override
