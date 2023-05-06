@@ -1,12 +1,21 @@
 package com.zaurtregulov.spring.mvc;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Employee {
     private String name;
     private String surname;
     private int salary;
     private String department;
 
+    private Map<String, String> departmentsList;
+
     public Employee() {
+        departmentsList = new HashMap<>();
+        departmentsList.put("IT", "Information Technology");
+        departmentsList.put("HR", "Human resources");
+        departmentsList.put("SALES", "Sales department");
     }
 
     public String getName() {

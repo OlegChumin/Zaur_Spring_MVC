@@ -26,18 +26,13 @@
     <br>
     <br>
     Department <form:select path="department">
-    <form:option value="Information Technology" label="IT"/>
-    <form:option value="Humar Resources" label="HR"/>
-    <form:option value="Sales department" label="SALES"/>
-    <br>
-    <br>
-
-
+<%--    <form:option value="Information Technology" label="IT"/>--%>
+<%--    <form:option value="Humar Resources" label="HR"/>--%>
+<%--    <form:option value="Sales department" label="SALES"/>--%>
+    <form:options items="${employee.departmentsList}"/>
 </form:select>
     <input type="submit" value="OK"/> <!--тут срабатывают сеттеры-->
 </form:form>
-<br>
-<br>
 <button onclick="history.back()">Back</button>
 </body>
 
