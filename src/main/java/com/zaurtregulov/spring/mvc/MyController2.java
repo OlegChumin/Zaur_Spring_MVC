@@ -2,19 +2,21 @@ package com.zaurtregulov.spring.mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.validation.Valid;
+
 /**
+ * Если вы добавите аннотацию @RequestMapping("/employee") к классу MyController2, то все URL-адреса в этом контроллере
+ * будут начинаться с "/employee". Например, URL-адрес, указанный в аннотации @RequestMapping("/askDetails"), будет теперь
+ * "/employee/askDetails". Если в вашем приложении используется только один контроллер, то добавление аннотации
  *
- Если вы добавите аннотацию @RequestMapping("/employee") к классу MyController2, то все URL-адреса в этом контроллере
- будут начинаться с "/employee". Например, URL-адрес, указанный в аннотации @RequestMapping("/askDetails"), будет теперь
- "/employee/askDetails". Если в вашем приложении используется только один контроллер, то добавление аннотации
- @RequestMapping к классу не имеет большого смысла, но если вы имеете несколько контроллеров, то это может помочь
- организовать их логически.
- *
- * */
+ * @RequestMapping к классу не имеет большого смысла, но если вы имеете несколько контроллеров, то это может помочь
+ * организовать их логически.
+ */
 @Controller
 @RequestMapping("/employee/")
 public class MyController2 {
@@ -23,12 +25,14 @@ public class MyController2 {
     public String showFirstView() {
         return "first-view";
     }
-//Таким образом, при обращении к / будет сначала выполнен метод showFirstView(),
+
+    //Таким образом, при обращении к / будет сначала выполнен метод showFirstView(),
 // который перенаправит запрос на /employee/first-view, где уже будет возвращаться нужное представление.
     @RequestMapping("/employee/first-view")
     public String showFirstView2() {
         return "first-view";
     }
+
     @RequestMapping("/askDetails") //URL
     public String askEmplyeeDetails(Model model) {
 
@@ -50,16 +54,22 @@ public class MyController2 {
 //    как ${employee.name}, ${employee.surname}, ${employee.salary} и т.д.
 
     @RequestMapping("/showDetails")
-    public String showEmpDetails(@ModelAttribute("employee") Employee emp) {
-        String name = emp.getName();
-        emp.setName("Mr./Mrs. " + name);
+    public String showEmpDetails(@Valid @ModelAttribute("employee") Employee emp, //@Valid проверка атрибута employee
+                                 BindingResult bindingResult) { //результат проверки employee
+        if (bindingResult.hasErrors()) {
+            return "ask-emp-details-view"; // если валидация с ошибкой возвращаем ту же страницу и она отображает
+            // message = "name must be 2..256 symbols!"
+        } else { // действует привычная логика
+            String name = emp.getName();
+            emp.setName("Mr./Mrs. " + name);
 
-        String surname = emp.getSurname();
-        emp.setSurname(surname + "!");
+            String surname = emp.getSurname();
+            emp.setSurname(surname + "!");
 
-        int salary = emp.getSalary();
-        emp.setSalary(salary * 3);
+            int salary = emp.getSalary();
+            emp.setSalary(salary * 3);
 
-        return "show-emp-details-view";
+            return "show-emp-details-view";
+        }
     }
 }
