@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  * */
 @Controller
-//@RequestMapping("/employee")
+@RequestMapping("/employee/")
 public class MyController2 {
 
     @RequestMapping("/")
