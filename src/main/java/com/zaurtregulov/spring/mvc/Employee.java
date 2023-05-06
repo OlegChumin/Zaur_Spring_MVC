@@ -50,6 +50,14 @@ public class Employee {
         this.department = department;
     }
 
+    public Map<String, String> getDepartmentsList() {
+        return departmentsList;
+    }
+
+    public void setDepartmentsList(Map<String, String> departmentsList) {
+        this.departmentsList = departmentsList;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
