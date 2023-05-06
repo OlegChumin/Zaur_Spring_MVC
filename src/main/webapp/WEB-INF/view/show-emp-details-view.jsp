@@ -26,6 +26,7 @@ Your surname: ${employee.surname}
 Your salary: ${employee.salary}
 <br>
 <br>
+Your department: ${employee.department}
 <button onclick="history.back()">Back</button>
 </body>
 </html>

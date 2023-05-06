@@ -25,6 +25,15 @@
     Salary <form:input path="salary"/> <!--GET salary-->
     <br>
     <br>
+    Department <form:select path="department">
+    <form:option value="Information Technology" label="IT"/>
+    <form:option value="Humar Resources" label="HR"/>
+    <form:option value="Sales department" label="SALES"/>
+    <br>
+    <br>
+
+
+</form:select>
     <input type="submit" value="OK"/> <!--тут срабатывают сеттеры-->
 </form:form>
 <br>
