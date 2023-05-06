@@ -14,7 +14,7 @@ public class Employee {
     @NotBlank(message = "surname is mandatory field and cannot be null")
     private String surname;
 
-    @NotBlank(message = "salary cannot be empty or null")
+//    @NotBlank(message = "salary cannot be empty or null")
     @Min(value = 2800, message = "must be > 2799 USD")
     @Max(value = 16_000, message = "must be less 15_999 USD")
     private int salary;
