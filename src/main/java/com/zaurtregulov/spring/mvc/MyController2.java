@@ -18,10 +18,11 @@ import javax.validation.Valid;
  * организовать их логически.
  */
 @Controller
-@RequestMapping("/employee/")
+@RequestMapping("/")
 public class MyController2 {
 
-    @RequestMapping("/")
+//    @RequestMapping("/")
+    @RequestMapping("")
     public String showFirstView() {
         return "first-view";
     }
