@@ -15,7 +15,7 @@
 <%--    <input type="submit"/>--%>
 <%--</form>--%>
 <%--@elvariable id="employee" type=""--%>
-<form:form action="showDetails" modelAttribute="employee">
+<form:form action="showDetails" modelAttribute="employee" method="post">
     Name <form:input path="name"/> <!--GET name-->
     <form:errors path="name"/> <!--выдает message ошибки если поле менее 2..256 символов-->
     <br><br>
