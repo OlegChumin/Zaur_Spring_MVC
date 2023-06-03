@@ -3,10 +3,7 @@ package com.zaurtregulov.spring.mvc;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -37,6 +34,7 @@ public class MyController2 {
 
     @RequestMapping("/askDetails") //URL
 //    @RequestMapping(path="/askDetails", method = RequestMethod.GET) //URL
+//    @GetMapping("/askDetails") //URL
     public String askEmplyeeDetails(Model model) {
 
 //        Employee employee = new Employee();
@@ -57,6 +55,7 @@ public class MyController2 {
 //    как ${employee.name}, ${employee.surname}, ${employee.salary} и т.д.
 
     @RequestMapping("/showDetails")
+//    @PostMapping("/showDetails")
     public String showEmpDetails(@Valid @ModelAttribute("employee") Employee emp, //@Valid проверка атрибута employee
                                  BindingResult bindingResult) { //результат проверки employee
 //        System.out.println("surname length = " + emp.getSurname().length());
